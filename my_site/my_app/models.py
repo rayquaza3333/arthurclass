@@ -20,10 +20,9 @@ class Lecture(models.Model):
     def __str__(self):
         return self.title
 
-
 class Homework(models.Model):
     """Model definition for Homework."""
-    lecture = models.ForeignKey('my_app.Lecture', related_name = 'homeworks', on_delete=models.CASCADE)
+    lecture = models.ForeignKey('my_app.Lecture', related_name = 'homeworks', on_delete = models.CASCADE)
     student = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     
 
