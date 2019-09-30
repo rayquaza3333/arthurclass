@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome!</title>
+
 </head>
 <body>
     <h1>Hello Phương, Trang, nhớ làm bài tập.</h1>
@@ -29,11 +31,12 @@
             </ol>
         </li>
     </ol>
+
     <h4>Ngoài ra, 2 đứa nhớ học thuộc phát âm bản chữ cái</h4>
-    <p>Tụi em học bảng chữ cái theo clip bên dưới</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/75p-N9YKqNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
+    <p>Tụi em học bảng chữ cái theo clip bên dưới</p> {{Homework.test}}
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/75p-N9YKqNo" 
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; 
+    picture-in-picture" allowfullscreen></iframe>
 
 
 </body>
