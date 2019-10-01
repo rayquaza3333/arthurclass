@@ -29,7 +29,6 @@ class Homework(models.Model):
     lecture = models.ForeignKey('my_app.Lecture', related_name='homeworks',
                                 on_delete=models.CASCADE)
     questions = []
-    answers = []
 
     def __str__(self):
         return self.title + ' ' + student.username + 'homework'
@@ -37,15 +36,22 @@ class Homework(models.Model):
     def add_question(self, index, question):
         questions.append(question)
         self.save()
-    
-    def add_answer(self, index, answer):
-        answers.append(answer)
-        self.save()
-    
     def remove_question(self, index):
         questions.pop(index)
         self.save()
     
+
+class Answer(models.Model):
+    """Model definition for Answer."""
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    homework = models.ForeignKey('my_app.Homework', on_delete=models.CASCADE)
+    answers = []
+
+    def add_answer(self, index, answer):
+        answers.append(answer)
+        self.save()
+
     def remove_answer(self, index):
         answers.pop(index)
         self.save()
+
