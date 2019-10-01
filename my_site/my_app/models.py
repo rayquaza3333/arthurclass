@@ -1,3 +1,4 @@
+
 from django.db import models
 from django.utils import timezone
 
@@ -14,7 +15,7 @@ class Lecture(models.Model):
     created_date = models.DateField(auto_now=True, auto_now_add=False)   
     published_date = models.DateField(auto_now=False, auto_now_add=False)
     published = models.BooleanField(default=False)
-    
+
     def publish(self):
         published = True
         published_date = timezone.now()
@@ -27,12 +28,24 @@ class Homework(models.Model):
     """Model definition for Homework."""
     lecture = models.ForeignKey('my_app.Lecture', related_name='homeworks',
                                 on_delete=models.CASCADE)
-    student = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     questions = []
     answers = []
 
     def __str__(self):
-        return self.title + ' ' + student.username + 'homework' 
+        return self.title + ' ' + student.username + 'homework'
+
+    def add_question(self, index, question):
+        questions.append(question)
+        self.save()
     
-    def add_question(self,question):
-        pass
+    def add_answer(self, index, answer):
+        answers.append(answer)
+        self.save()
+    
+    def remove_question(self, index):
+        questions.pop(index)
+        self.save()
+    
+    def remove_answer(self, index):
+        answers.pop(index)
+        self.save()
