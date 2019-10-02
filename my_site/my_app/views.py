@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import (TemplateView, DetailView,
                                 ListView, DeleteView, FormView,
-                                CreateView)
+                                CreateView, UpdateView)
 from .models import Homework, Answer
 
 # Code start here
@@ -29,7 +29,7 @@ class HomeworkDeleteView(DeleteView):
 
 class HomeworkUpdateView(UpdateView):
     model = Homework
-    fields = __all
+    fields = '__all__'
 
 # Classes for answer 
 
