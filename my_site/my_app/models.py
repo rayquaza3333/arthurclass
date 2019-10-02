@@ -13,7 +13,7 @@ class Lecture(models.Model):
     description = models.CharField(max_length=256)
     text = models.TextField()
     created_date = models.DateField(auto_now=True, auto_now_add=False)   
-    published_date = models.DateField(auto_now=False, auto_now_add=False)
+ .DateField(auto_now=False, auto_now_add=False)
     published = models.BooleanField(default=False)
 
     def publish(self):
@@ -26,8 +26,7 @@ class Lecture(models.Model):
 
 class Homework(models.Model):
     """Model definition for Homework."""
-    lecture = models.ForeignKey('my_app.Lecture', related_name='homeworks',
-                                on_delete=models.CASCADE)
+
     questions = []
 
     def __str__(self):
@@ -43,7 +42,7 @@ class Homework(models.Model):
 
 class Answer(models.Model):
     """Model definition for Answer."""
-    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    user = models.ForeignKey('auth.User ', on_delete=models.CASCADE)
     homework = models.ForeignKey('my_app.Homework', on_delete=models.CASCADE)
     answers = []
 

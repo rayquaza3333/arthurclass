@@ -20,36 +20,34 @@ class HomeworkListView(ListView):
 
 class HomeworkCreateView(CreateView):
     model = Homework
-    template_name = "TEMPLATE_NAME"
 
 
 class HomeworkDeleteView(DeleteView):
     model = Homework
-    template_name = "TEMPLATE_NAME"
+
 
 
 class HomeworkUpdateView(UpdateView):
     model = Homework
-    template_name = "TEMPLATE_NAME"
-
+    fields = __all
 
 # Classes for answer 
 
-class AnswerListView(ListView):
-    model = Answer
+# class AnswerListView(ListView):
+#     model = Answer
 
 
-class AnswerCreateView(CreateView):
-    model = Answer
-    template_name = "TEMPLATE_NAME"
+# class AnswerCreateView(CreateView):
+#     model = Answer
+#     template_name = "TEMPLATE_NAME"
 
 
-class AnswerDeleteView(DeleteView):
-    model = Answer
-    template_name = "TEMPLATE_NAME"
+# class AnswerDeleteView(DeleteView):
+#     model = Answer
+#     template_name = "TEMPLATE_NAME"
 
 
-class AnswerUpdateView(UpdateView):
-    model = Answer
-    template_name = "TEMPLATE_NAME"
+# class AnswerUpdateView(UpdateView):
+#     model = Answer
+#     template_name = "TEMPLATE_NAME"
 
