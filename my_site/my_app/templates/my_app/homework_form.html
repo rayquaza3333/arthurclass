@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
 
 {% block Title %}
-    
+    Create new homework
 {% endblock Title %}
-    
+
 
 {% block Body %}
-    
+        <form method = 'POST'>
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" class="btn btn-primary" name="" id="">
+        </form>
+       <script>var editor = new MediumEditor('.editable');</script>
+
 {% endblock Body %}
     
