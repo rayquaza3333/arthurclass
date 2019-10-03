@@ -19,7 +19,6 @@ from my_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HomePage.as_view(), name='index'),    
-    path('homeworks', include('my_app.urls', namespace = 'homework')),
+    path('', views.HomePage.as_view(), name='index'),
+    path('homeworks', include('my_app.urls', namespace='homework')),
 ]
-
