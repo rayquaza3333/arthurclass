@@ -6,13 +6,13 @@
     
 
 {% block Body %}
-    
+    <ol>
     {% for homework in object_list %}
-      <ol>
+      
         <li><a href="{% url 'homework:detail' pk=homework.pk %}"><h2> {{homework.lecture}} </h2>
         </a></li>
-      </ol>   
+     
     {% endfor %}
-        
+    </ol>
 {% endblock Body %}
     

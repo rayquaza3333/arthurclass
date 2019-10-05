@@ -26,5 +26,4 @@ urlpatterns = [
     path('delete/', views.HomeworkDeleteView.as_view(), name='delete'),
     path('<int:pk>/', views.HomeworkDetailView.as_view(), name='detail'),
     path('', views.HomeworkListView.as_view(), name='all'),
-
 ]
