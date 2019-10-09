@@ -10,7 +10,7 @@ class Homework(models.Model):
     answers = []
 
     def __str__(self):
-        return self.lecture +' ' + 'homework'
+        return self.lecture 
 
     def add_question(self, index, question):
         questions.append(question)
