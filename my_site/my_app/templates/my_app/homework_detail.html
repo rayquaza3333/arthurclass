@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
+
 {% block Title %}
     Detail Homework
 {% endblock Title %}
-    
-
 {% block Body %}
  <h1> {{homework.lecture}} </h1>
  <p> {{homework.questions|safe|linebreaksbr}} </p>
-    
+ <img src="{{ homework.questions_img.url }}" alt="">
 {% endblock Body %}
     

@@ -7,6 +7,7 @@ class Homework(models.Model):
     """Model definition for Homework."""
     lecture = models.CharField( max_length=50)    
     questions = models.TextField(null = True)
+    question_img = models.ImageField( upload_to='homeworks', null='True')
     answers = []
 
     def __str__(self):

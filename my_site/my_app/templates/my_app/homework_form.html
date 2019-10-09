@@ -6,12 +6,13 @@
 
 
 {% block Body %}
-        <form method = 'POST'>
+        <form method = 'POST' enctype='multipart/form-data' >
             {% csrf_token %}
             {{form.as_p}}
+            <a target="_blank" class="btn btn-warning" href="https://wordhtml.com">Docs to HTML</a>
+            <p></p>
             <input type="submit" class="btn btn-primary" name="" id="">
         </form>
-       <script>var editor = new MediumEditor('.editable');</script>
-
+ 
 {% endblock Body %}
     
