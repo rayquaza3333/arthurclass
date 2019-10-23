@@ -7,6 +7,7 @@
 {% block Body %}
  <h1> {{homework.lecture}} </h1>
  <p> {{homework.questions|safe|linebreaksbr}} </p>
- <img src="{{ homework.questions_img.url }}" alt="">
+ <img src="{{ homework.question_img.url }}" alt="Image not found">
+ <p>{{homework.question_img}}</p>
 {% endblock Body %}
     
