@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-from .views import RecordingListView
+from .views import RecordingListView,RecordingDetailView
 
 app_name = 'sidebyside1'
 
 urlpatterns = [
     path('recordings/', views.RecordingListView.as_view(), name='recordings'),
-    ]
+    path('recording/<int:pk>', views.RecordingDetailView.as_view(), 
+                                                    name='detail'),
+    ] 

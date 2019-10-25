@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block Title %}
+    Recording
+{% endblock Title %}
+
+
+{% block Body %}
+<form action="">
+    
+</form>
+    {{form.as_p}}
+    <div class="container">
+        <audio src="{{recording.recording.url}}" controls></audio>
+    </div>
+{% endblock Body %}
+    

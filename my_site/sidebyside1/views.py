@@ -7,3 +7,8 @@ from django.views.generic import ListView, TemplateView, DetailView, CreateView
 
 class RecordingListView(ListView):
     model = Recording
+
+
+class RecordingDetailView(DetailView):
+    model = Recording
+

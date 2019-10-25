@@ -10,7 +10,6 @@
     <table class="table table-striped table-dark">
         <tr>
             <th>Number</th>
-            <th>Title</th>
             <th>Recording</th>            
         </tr>
 
@@ -18,9 +17,7 @@
         {% for recording in recording_list %}
             <tr>
                 <td>{{recording.pk}}</td>
-                <td>{{recording.title}}</td>
-                <td><a href="{{recording.recording.url}}">{{recording.recording.url}}</a></td>
-                <td><audio src="{{ recording.recording.url }}" controls></audio></td>
+                <td><a href="{% url 'sidebyside1:detail' pk=recording.pk %}">{{recording.title}}</a></td>
             </tr>
         {% endfor %}
     </table>
