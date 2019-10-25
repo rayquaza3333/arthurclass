@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from my_app import views
+from . import views
+from .views import RecordingListView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.HomePage.as_view(), name='index'),
-    path('homeworks/', include('my_app.urls', namespace='homework')),
-    path('sidebyside1/', include('sidebyside1.urls', namespace='sidebyside1')),
-]
+    path('recordings/', views.RecordingListView.as_view(), name='recordings'),
+    ]
