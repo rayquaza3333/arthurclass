@@ -18,6 +18,8 @@ from django.urls import path, include
 from . import views
 from .views import RecordingListView
 
+app_name = 'sidebyside1'
+
 urlpatterns = [
     path('recordings/', views.RecordingListView.as_view(), name='recordings'),
     ]

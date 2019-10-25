@@ -29,7 +29,7 @@
     <div class="jumbotron">
         <ul class="nav navbar-nav">
             <li><a class="navbar-brand" href="{% url 'homework:all' %}">Xem bài tập</a></li>
-            
+            <li><a href="{% url 'sidebyside1:recordings' %}">File ghi âm bài tập</a></li>
             {% if user.is_authenticated %}
             <li><a class="navbar-link" href="{% url 'homework:create' %}">Create</a></li>
                 
