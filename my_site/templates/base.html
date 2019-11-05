@@ -30,7 +30,7 @@
         <ul class="nav navbar-nav">
             <li><a class="navbar-link" href="{% url 'homework:all' %}">Xem bài tập</a></li>
             <li><a href="{% url 'sidebyside1:recordings' %}">File ghi âm bài tập</a></li>
-            <p>(Lưu ý: Sử dụng trình duyệt Google Chrome để tránh bị lỗi với các file ghi âm</p>
+            <p>(Lưu ý: Sử dụng trình duyệt Google Chrome để tránh bị lỗi với các file ghi âm)</p>
             {% if user.is_authenticated %}
             <li><a class="navbar-link" href="{% url 'homework:create' %}">Create</a></li>
             {% endif %}
